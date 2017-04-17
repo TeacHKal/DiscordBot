@@ -1,4 +1,4 @@
-package DiscordBot.Commands.Packages;
+package DiscordBot.Packages;
 
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 

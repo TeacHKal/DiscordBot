@@ -1,10 +1,9 @@
 package DiscordBot;
 
 import DiscordBot.BotUtil.BotUtil;
-import DiscordBot.Commands.CommandParser;
-import DiscordBot.Commands.Packages.PackageInterface;
-import DiscordBot.Commands.Packages.DefaultPackage;
-import DiscordBot.Commands.Packages.EveOnlinePackage;
+import DiscordBot.Packages.PackageInterface;
+import DiscordBot.Packages.DefaultPackage;
+import DiscordBot.Packages.EveOnlinePackage;
 import DiscordBot.Listeners.onMessageReceivedListener;
 import DiscordBot.Listeners.onReadyListener;
 import net.dv8tion.jda.core.*;

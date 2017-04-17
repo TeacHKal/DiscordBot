@@ -12,15 +12,18 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 public class ServerInfoCmd implements Command{
 
     @Override
-    public void invoke(MessageReceivedEvent messageReceivedEvent) {
+    public void execute(MessageReceivedEvent messageReceivedEvent) {
         ServerInfo serverInfo = ServerInfoService.getServerInfo();
 
         StringBuilder sb = new StringBuilder();
-
         sb.append("Server Status: " + serverInfo.getServerStatus());
         sb.append(Util.NEW_LINE);
         sb.append("Players Online: " + serverInfo.getOnlinePlayers());
         sb.append(Util.NEW_LINE);
         sb.append("Server Time: " + serverInfo.getCurrentTime());
+
+            messageReceivedEvent.getChannel().sendMessage(sb.toString()).queue();
+
+        System.out.println(sb.toString());
     }
 }

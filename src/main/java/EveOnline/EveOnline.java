@@ -2,6 +2,7 @@ package EveOnline;
 
 import DiscordBot.Commands.Command;
 import EveOnline.Commands.ServerInfoCmd;
+import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 import java.util.HashMap;
 
@@ -10,12 +11,22 @@ import java.util.HashMap;
  */
 public class EveOnline {
 
-    HashMap<String, Command> commands = new HashMap<>();
+    private static HashMap<String, Command> commands = new HashMap<>();
+
+    public static void invokeCommand(MessageReceivedEvent messageReceivedEvent, String invoke, String[] args){
+        initializeCommands();
+        if(commands.containsKey(invoke)) {
+            commands.get(invoke).execute(messageReceivedEvent);
+        }
+        else{
+
+        }
 
 
+    }
 
-    public void initializeCommands() {
-        commands.put("serverInfo", new ServerInfoCmd());
-
+    public static void initializeCommands() {
+        commands.put("server", new ServerInfoCmd());
+        commands.put("help", new HelpCmd());
     }
 }

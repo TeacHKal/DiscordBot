@@ -9,7 +9,7 @@ import java.util.HashMap;
  * Created by teach on 4/16/2017.
  */
 public class ServerInfoService {
-    final static String URL_PATH = "api.eveonline.com/server/ServerStatus.xml.aspx";
+    final static String URL_PATH = "https://api.eveonline.com/server/ServerStatus.xml.aspx";
     final static String CURRENT_TIME_NODE = "currentTime";
     final static String SERVER_OPEN_NODE = "serverOpen";
     final static String ONLINE_PLAYERS_NODE = "onlinePlayers";

@@ -37,6 +37,7 @@ public class Util {
 
     //===============================================================================================
     public String getDataFromUrl(String urlPath) {
+
         URL url;
         StringBuilder stringBuilder = new StringBuilder();
         try {

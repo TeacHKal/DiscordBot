@@ -12,7 +12,7 @@ public class CommandParser {
 
 
     public static CommandContainer parse(MessageReceivedEvent messageReceivedEvent){
-        String beheaded = removePrefix(messageReceivedEvent.getMessage().getContent());
+        String beheaded = removePrefix(messageReceivedEvent.getMessage().getContent()).toLowerCase();
         String commandPackageType = commandPackageType(beheaded);
         String invoke = getInvoke(beheaded);
         String[] args = getArgs(beheaded);
