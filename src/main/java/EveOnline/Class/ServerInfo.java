@@ -9,7 +9,6 @@ public class ServerInfo {
     private String serverStatus;
     private String onlinePlayers;
 
-
     public ServerInfo(String currentTime, String serverStatus, String onlinePlayers) {
         this.currentTime = currentTime;
         this.serverStatus = serverStatus;
@@ -19,9 +18,7 @@ public class ServerInfo {
     public String getCurrentTime() {
         return currentTime;
     }
-    public String getServerStatus() {
-        return serverStatus;
-    }
+    public String getServerStatus() { return serverStatus; }
     public String getOnlinePlayers() {
         return onlinePlayers;
     }

@@ -24,8 +24,6 @@ public class Character {
 
     }
 
-
-
     public int getCharacterID() {
         return characterID;
     }

@@ -1,6 +1,7 @@
 package EveOnline.Commands;
 
 import DiscordBot.Commands.Command;
+import Helper.Util;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 /**
@@ -9,6 +10,6 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 public class HelpCmd implements Command{
     @Override
     public void execute(MessageReceivedEvent messageReceivedEvent) {
-        
+        messageReceivedEvent.getTextChannel().sendMessage(Util.COMMAND_DOESNT_EXIST).queue();
     }
 }

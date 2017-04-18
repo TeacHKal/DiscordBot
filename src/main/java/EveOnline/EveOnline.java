@@ -1,9 +1,8 @@
 package EveOnline;
 
 import DiscordBot.Commands.Command;
-import EveOnline.Commands.ServerInfoCmd;
+import EveOnline.Commands.*;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
-
 import java.util.HashMap;
 
 /**
@@ -19,10 +18,8 @@ public class EveOnline {
             commands.get(invoke).execute(messageReceivedEvent);
         }
         else{
-
+            commands.get("help").execute(messageReceivedEvent);
         }
-
-
     }
 
     public static void initializeCommands() {

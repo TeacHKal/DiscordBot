@@ -24,10 +24,11 @@ import java.util.Scanner;
 public class Util {
 
     public final static String NEW_LINE = "\n";
-    private static Util instance;
-
+    public final static String COMMAND_DOESNT_EXIST = "Command does not exist!!";
 
     //===============================================================================================
+    private static Util instance;
+
     public static Util getInstance(){
         if(instance == null){
             instance = new Util();
