@@ -23,8 +23,7 @@ import java.util.Scanner;
 
 public class Util {
 
-    public final static String NEW_LINE = "\n";
-    public final static String COMMAND_DOESNT_EXIST = "Command does not exist!!";
+
 
     //===============================================================================================
     private static Util instance;

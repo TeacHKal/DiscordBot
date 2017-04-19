@@ -5,7 +5,11 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 /**
  * Created by teach on 4/16/2017.
  */
-public interface Command {
-    void execute(MessageReceivedEvent messageReceivedEvent);
+public abstract class Command {
 
+    abstract public void execute(MessageReceivedEvent messageReceivedEvent, String invoke, String[] args, String packageType);
+
+    public void unknownCommand(MessageReceivedEvent messageReceivedEvent, String invoke, String[] args, String packageType){
+
+    }
 }

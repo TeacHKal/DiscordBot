@@ -8,15 +8,15 @@ import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 public class CommandContainer {
 
     private MessageReceivedEvent event;
-    private String commandPackageType;
+    private String packageType;
     private String invoke;
     private String[] args;
 
 
 
-    public CommandContainer(MessageReceivedEvent event, String commandPackageType, String invoke, String[] args){
+    public CommandContainer(MessageReceivedEvent event, String packageType, String invoke, String[] args){
         this.event = event;
-        this.commandPackageType = commandPackageType;
+        this.packageType = packageType;
         this.invoke  = invoke;
         this.args = args;
 
@@ -27,8 +27,8 @@ public class CommandContainer {
         return event;
     }
 
-    public String getCommandPackageType() {
-        return commandPackageType;
+    public String getPackageType() {
+        return packageType;
     }
 
     public String getInvoke() {

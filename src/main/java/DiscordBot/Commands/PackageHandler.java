@@ -12,8 +12,9 @@ public class PackageHandler {
 
         CommandContainer cmd = CommandParser.parse(messageReceivedEvent);
 
-        if(packages.containsKey(cmd.getCommandPackageType())){
-            packages.get(cmd.getCommandPackageType()).action(messageReceivedEvent, cmd.getInvoke(), cmd.getArgs());
+        if(packages.containsKey(cmd.getPackageType())){
+            packages.get(cmd.getPackageType()).action(messageReceivedEvent, cmd.getInvoke(),
+                    cmd.getArgs(), cmd.getPackageType());
         }
   }
 }
