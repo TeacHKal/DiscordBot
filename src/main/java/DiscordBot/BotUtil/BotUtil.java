@@ -5,12 +5,16 @@ package DiscordBot.BotUtil;
  */
 public class BotUtil {
 
-    public final static String PREFIX = "!";
+    public final static String PREFIX = ".";
     public final static String EMPTY_SPACE = " ";
     public final static String PLAYING = getGame();
 
     private static String getGame (){
         return "Type " + PREFIX + "help";
+    }
+
+    public static String getPrefix(){
+        return PREFIX;
     }
 
 }

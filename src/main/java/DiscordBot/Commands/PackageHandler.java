@@ -5,6 +5,7 @@ import static DiscordBot.DiscordBot.packages;
 
 /**
  * Created by teach on 4/14/2017.
+ * email: teach.inbox@gmail.com
  */
 public class PackageHandler {
 

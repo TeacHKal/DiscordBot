@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 /**
  * Created by teach on 4/16/2017.
+ * email: teach.inbox@gmail.com
  */
 public class ServerInfoService {
     final static String URL_PATH = "https://api.eveonline.com/server/ServerStatus.xml.aspx";
