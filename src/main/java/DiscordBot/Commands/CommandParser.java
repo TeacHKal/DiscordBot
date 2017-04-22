@@ -21,13 +21,13 @@ public class CommandParser {
     }
 
 
-    public static String removePrefix(String rawString){
-        String detruncate = rawString.replaceFirst(BotUtil.PREFIX, "");
+    private static String removePrefix(String rawString){
+        String detruncate = rawString.replaceFirst(BotUtil.PREFIX, BotUtil.EMPTY_STRING);
         return detruncate;
     }
 
 
-    public static String commandPackageType(String beheaded){
+    private static String commandPackageType(String beheaded){
         String[] splited = beheaded.split(BotUtil.EMPTY_SPACE);
         String commandType = splited[0];
 
@@ -36,7 +36,7 @@ public class CommandParser {
     }
 
 
-    public static String getInvoke(String beheaded){
+    private static String getInvoke(String beheaded){
         String[] splited = beheaded.split(BotUtil.EMPTY_SPACE);
         String commandType = splited[1];
 
@@ -44,7 +44,7 @@ public class CommandParser {
 
     }
 
-    public static String[] getArgs(String beheaded){
+    private static String[] getArgs(String beheaded){
         String[] splited = beheaded.split(BotUtil.EMPTY_SPACE);
         String[] args = Arrays.copyOfRange(splited, 2, splited.length);
 

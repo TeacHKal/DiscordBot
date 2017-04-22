@@ -1,6 +1,6 @@
-package DefaultCommands;
+package DefaultCommand;
 
-import DefaultCommands.Commands.ChannelCreationTime;
+import DefaultCommand.Commands.ChannelCreationTime;
 import DiscordBot.Commands.Command;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 import java.util.HashMap;

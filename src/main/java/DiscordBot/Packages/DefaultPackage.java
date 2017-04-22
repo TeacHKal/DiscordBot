@@ -1,6 +1,6 @@
 package DiscordBot.Packages;
 
-import DefaultCommands.CommonController;
+import DefaultCommand.CommonController;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 /**

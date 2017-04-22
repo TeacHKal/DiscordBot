@@ -14,16 +14,20 @@ public class ServerInfoCmd extends Command {
 
     @Override
     public void execute(MessageReceivedEvent messageReceivedEvent, String invoke, String[] args, String packageType) {
+
         ServerInfo serverInfo = ServerInfoService.getServerInfo();
 
         StringBuilder sb = new StringBuilder();
-        sb.append("Server Status: " + serverInfo.getServerStatus());
+        sb.append("Server Status: ");
+        sb.append(serverInfo.getServerStatus());
         sb.append(Static.NEW_LINE);
-        sb.append("Players Online: " + serverInfo.getOnlinePlayers());
+        sb.append("Players Online: ");
+        sb.append(serverInfo.getOnlinePlayers());
         sb.append(Static.NEW_LINE);
-        sb.append("Server Time: " + serverInfo.getCurrentTime());
+        sb.append("Server Time: ");
+        sb.append(serverInfo.getCurrentTime());
 
-            messageReceivedEvent.getChannel().sendMessage(sb.toString()).queue();
+        messageReceivedEvent.getChannel().sendMessage(sb.toString()).queue();
 
         System.out.println(sb.toString());
     }
