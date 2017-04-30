@@ -19,5 +19,6 @@ dependencies {
     compile 'net.dv8tion:JDA:3.0.0_175'
     compile 'ch.qos.logback:logback-core:1.1.2'
     compile 'ch.qos.logback:logback-classic:1.1.2'
+    compile 'com.google.code.gson:gson:2.2.4'
 
 }

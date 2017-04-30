@@ -19,6 +19,7 @@ import java.util.Scanner;
 
 /**
  * Created by teach on 4/14/2017.
+ * email: teach.inbox@gmail.com
  */
 
 public class Util {
@@ -46,10 +47,7 @@ public class Util {
             while(scanner.hasNext()){
                 stringBuilder.append(scanner.nextLine());
             }
-        }
-        catch (MalformedURLException e) {
-            e.printStackTrace();
-        }catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
@@ -57,7 +55,7 @@ public class Util {
     }
 
     //===============================================================================================
-    public HashMap getNodesFromXmlString(String[] nodeNames, String xmlString){
+    public HashMap<String, String> getNodesFromXmlString(String[] nodeNames, String xmlString){
 
         HashMap<String, String> hmNodes = new HashMap<>();
         Document document;
@@ -82,11 +80,7 @@ public class Util {
 
             return hmNodes;
 
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        }catch (IOException e) {
+        } catch (SAXException | ParserConfigurationException | IOException e) {
             e.printStackTrace();
         }
 

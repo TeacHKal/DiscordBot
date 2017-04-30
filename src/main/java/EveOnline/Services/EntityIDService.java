@@ -20,35 +20,32 @@ import java.io.StringReader;
  * email: teach.inbox@gmail.com
  */
 
-public class CharacterIdService {
+public class EntityIDService {
     private static final String URL_PATH = "https://api.eveonline.com/eve/CharacterID.xml.aspx?names=";
-    public static final String PLAYER_ID_NODE = "characterID";
-    public static final String CORPORATION_ID_NODE = "corporationID";
-    public static final String ALLIANCE_ID_NODE = "allianceID";
 
     private static final String CHARACTER_ID_ROW_NODE = "row";
 
-    private static CharacterIdService instance = null;
+    private static EntityIDService instance = null;
 
     //===============================================================================================
-    public static CharacterIdService getInstance(){
+    public static EntityIDService getInstance(){
         if(instance == null){
-            instance = new CharacterIdService();
+            instance = new EntityIDService();
         }
         return instance;
     }
 
     //===============================================================================================
-    public int getEntityID(String name, String entityType) {
+    public String  getEntityID(String name, String entityType) {
 
         String xmlData = Util.getInstance().getDataFromUrl(this.URL_PATH + name);
-        int characterID = getEntityIdFromXML(xmlData, entityType);
+        String characterID = getEntityIdFromXML(xmlData, entityType);
 
         return characterID;
     }
 
     //===============================================================================================
-    private int getEntityIdFromXML(String xmlString, String entityType){
+    private String getEntityIdFromXML(String xmlString, String entityType){
         String characterID;
         Document document = null;
         DocumentBuilder documentBuilder;
@@ -71,7 +68,7 @@ public class CharacterIdService {
         Element characterIdElement = (Element) characterIdNode;
         characterID = characterIdElement.getAttribute(entityType);
 
-        return Integer.parseInt(characterID);
+        return characterID;
     }
 
     //===============================================================================================

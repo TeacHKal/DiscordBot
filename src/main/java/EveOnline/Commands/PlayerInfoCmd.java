@@ -1,7 +1,7 @@
 package EveOnline.Commands;
 
 import DiscordBot.Commands.Command;
-import EveOnline.Model.PlayerInfoModel;
+import EveOnline.API.zKillboardAPI.Model.PlayerModel;
 import net.dv8tion.jda.core.events.message.MessageReceivedEvent;
 
 /**
@@ -12,7 +12,7 @@ public class PlayerInfoCmd extends Command {
     @Override
     public void execute(MessageReceivedEvent messageReceivedEvent, String invoke, String[] args, String packageType) {
 
-        String playerInfoString = PlayerInfoModel.getPlayerInfoString()
+        String playerInfoString = PlayerModel.getPlayerInfoString(args);
         messageReceivedEvent.getChannel().sendMessage(playerInfoString).queue();
         System.out.println(playerInfoString);
     }
