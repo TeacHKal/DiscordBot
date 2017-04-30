@@ -3,6 +3,7 @@ package EveOnline.Collection;
 import DefaultCommand.Util.DefUtil;
 import DiscordBot.Commands.Command;
 import EveOnline.Commands.HelpCmd;
+import EveOnline.Commands.PlayerInfoCmd;
 import EveOnline.Commands.ServerInfoCmd;
 import EveOnline.Util.EveOnlineUtil;
 
@@ -19,8 +20,14 @@ public class CommandCollection {
     }
 
     public static void addHelpCmd(HashMap<String, Command> commands){
-        for(String command : DefUtil.DEFAULT_PACKAGE_CMDS){
+        for(String command : EveOnlineUtil.EVE_HELP_CMDS){
             commands.put(command, new HelpCmd());
+        }
+    }
+
+    public static void addPlayerInfoCmd(HashMap<String, Command> commands){
+        for(String command : EveOnlineUtil.EVE_PLAYER_INFO_CMDS){
+            commands.put(command, new PlayerInfoCmd());
         }
     }
 }

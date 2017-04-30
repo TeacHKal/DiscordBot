@@ -9,7 +9,7 @@ public abstract class Command {
 
     abstract public void execute(MessageReceivedEvent messageReceivedEvent, String invoke, String[] args, String packageType);
 
-    public void unknownCommand(MessageReceivedEvent messageReceivedEvent, String invoke, String[] args, String packageType){
+    public static void unknownCommand(MessageReceivedEvent messageReceivedEvent, String invoke, String[] args, String packageType){
 
     }
 }

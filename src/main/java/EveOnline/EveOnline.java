@@ -27,10 +27,10 @@ public class EveOnline {
     }
 
 
-
     private static void initializeCommands() {
         CommandCollection.addServerInfoCmd(commands);
         CommandCollection.addHelpCmd(commands);
+        CommandCollection.addPlayerInfoCmd(commands);
 
     }
 }

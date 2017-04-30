@@ -2,6 +2,7 @@ package EveOnline.Class;
 
 /**
  * Created by teach on 4/17/2017.
+ * email: teach.inbox@gmail.com
  */
 public class ServerInfo {
 
@@ -15,11 +16,7 @@ public class ServerInfo {
         this.onlinePlayers = onlinePlayers;
     }
 
-    public String getCurrentTime() {
-        return currentTime;
-    }
+    public String getCurrentTime() { return currentTime; }
     public String getServerStatus() { return serverStatus; }
-    public String getOnlinePlayers() {
-        return onlinePlayers;
-    }
+    public String getOnlinePlayers() { return onlinePlayers; }
 }

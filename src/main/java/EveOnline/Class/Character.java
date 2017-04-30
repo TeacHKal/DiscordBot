@@ -1,7 +1,10 @@
 package EveOnline.Class;
 
+import EveOnline.Services.CharacterEntityService;
+
 /**
  * Created by teach on 4/14/2017.
+ * email: teach.inbox@gmail.com
  */
 
 public class Character {
@@ -12,14 +15,28 @@ public class Character {
     private int shipKill;
     private int shipLost;
     private float iskDestroyed;
+    private float iskLost;
     private int activeShipDestroyed;
+    private int pointsDestroyed;
+    private int pointsLost;
+    private int soloKills;
+    private int soloLosses;
 
     private int characterID;
 
-    //========================================================================
-    public Character()
-    {
 
+    //========================================================================
+    public Character(String type, String id)
+    {
+        CharacterEntityService characterEntityService = new CharacterEntityService(type, id);
+        this.shipKill = characterEntityService.getShipsDestroyed();
+        this.shipLost = characterEntityService.getShipsLost();
+        this.iskDestroyed = characterEntityService.getIskDestroyed();
+        this.iskLost = characterEntityService.getIskLost();
+        this.pointsDestroyed = characterEntityService.getPointsDestroyed();
+        this.pointsLost = characterEntityService.getPointsLost();
+        this.soloKills = characterEntityService.getSoloKills();
+        this.soloLosses = characterEntityService.getSoloLosses();
 
 
     }

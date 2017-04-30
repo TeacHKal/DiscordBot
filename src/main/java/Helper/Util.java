@@ -23,7 +23,7 @@ import java.util.Scanner;
 
 public class Util {
 
-
+    private static final int FIRST = 0;
 
     //===============================================================================================
     private static Util instance;
@@ -73,8 +73,8 @@ public class Util {
             for (String node: nodeNames) {
                 NodeList rowNode = document.getElementsByTagName(node);
 
-                Element element = (Element) rowNode.item(0);
-                Node sourceName = (Node) element.getChildNodes().item(0);
+                Element element = (Element) rowNode.item(FIRST);
+                Node sourceName = element.getChildNodes().item(FIRST);
                 String retrievedNode = sourceName.getNodeValue();
 
                 hmNodes.put(node, retrievedNode);
@@ -89,7 +89,6 @@ public class Util {
         }catch (IOException e) {
             e.printStackTrace();
         }
-
 
         return null;
     }
